@@ -12,4 +12,4 @@ def fizzbuzz():
 
 
 fizzbuzz()
-print()
+print("$")
