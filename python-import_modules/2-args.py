@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
+    args = sys.argv
+
     def num_args():
-        args = sys.argv
         num_args = len(args)
         if num_args == 1:
             print("0 arguments.")
