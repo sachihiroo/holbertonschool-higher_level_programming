@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+    import sys
 
-    def sum_all(*args):
-        sum = 0
-        for num in args:
-            if not str(num).isdigit():
-                return False
-        else:
-            sum += int(num)
-            return sum
+    argv = sys.argv
+    num = len(argv)
+    sum = 0
+    for idx in range(1, num):
+        sum += int(argv[idx])
+        print(sum)
