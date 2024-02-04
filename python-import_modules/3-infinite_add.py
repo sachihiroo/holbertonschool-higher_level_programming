@@ -6,4 +6,4 @@ if __name__ == "__main__":
     sum = 0
     for idx in range(1, len(argv)):
         sum += int(argv[idx])
-        print("{}".format(sum))
+    print("{}".format(sum))
