@@ -51,6 +51,8 @@ class Square:
     def position(self, value):
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("Position must be a tuple with two integers.")
+        if any(not isinstance(i, int) for i in value):
+            raise TypeError("Position must be a tuple with two integers.")
         self.__position = value
 
     # Public instance method
@@ -74,4 +76,5 @@ class Square:
 
         for i in range(self.size):
             print(" " * self.position[0] + "#" * self.size)
+
     pass
