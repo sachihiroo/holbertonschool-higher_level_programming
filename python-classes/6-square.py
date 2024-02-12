@@ -57,7 +57,8 @@ class Square:
             return
         else:
             for i in range(self.position[1]):
-                  print()
-            for j in range(self.position[0], self.position[0]+self.__size):
-                       print(" " * self.position[0] + "#" * self.__size)
+                print()
+            for j in range(self.position[0], self.position[0] + self.__size):
+                print(" " * self.position[0] + "#" * self.__size)
+
     pass
