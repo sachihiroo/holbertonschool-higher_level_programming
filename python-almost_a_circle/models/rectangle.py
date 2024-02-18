@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
+
 from models.base import Base
 
 
@@ -22,11 +23,11 @@ class Rectangle(Base):
             ValueError: If either of x or y < 0.
         """
 
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
