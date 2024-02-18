@@ -30,6 +30,10 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
 
+    def __str__(self):
+        """Returns [Square] (<id>) <x>/<y> - <width>/<height>"""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+
     def update(self, *args, **kwargs):
         """Update the Square.
 
