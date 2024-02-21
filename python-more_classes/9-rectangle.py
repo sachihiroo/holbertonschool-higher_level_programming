@@ -12,8 +12,8 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -41,17 +41,15 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        "Return the area of the rectangle."
-        return self.height * self.width
+        return self.__height * self.__width
 
     def perimeter(self):
-        "Return the perimeter of this rectangle."
-        if self.height == 0 or self.width == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self.height + self.width)
+        return (self.__height + self.__width) * 2
 
     def __str__(self):
-        if self.height == 0 or self.width == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
         for i in range(self.__height):
             for j in range(self.__width):
@@ -61,14 +59,14 @@ class Rectangle:
         return ""
 
     def __repr__(self):
-        return f"Rectangle({self.width}, {self.height})"
+        return f"Rectangle({self.__height}, \
+        {self.__width})"
 
     def __del__(self):
+        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-        print(f"Bye rectangle...")
 
     def bigger_or_equal(rect_1, rect_2):
-        """Check if rect_1 has a greater or equal area than rect_2"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
