@@ -23,7 +23,6 @@ if __name__ == "__main__":
 
     # Executing the SQL query to select all states
     # from the database and sorting by 'id' in ascending order
-    name = sys.argv[4]
     cursor.execute(
         "SELECT cities.id, cities.name, states.name\
             FROM cities INNER JOIN states ON\
